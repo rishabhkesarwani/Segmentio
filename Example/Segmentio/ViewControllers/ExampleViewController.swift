@@ -92,17 +92,9 @@ class ExampleViewController: UIViewController {
             break
         }
         
-        return SegmentioOptions(
-            backgroundColor: ColorPalette.white,
-            maxVisibleItems: 3,
-            scrollEnabled: true,
-            indicatorOptions: segmentioIndicatorOptions(),
-            horizontalSeparatorOptions: segmentioHorizontalSeparatorOptions(),
-            verticalSeparatorOptions: segmentioVerticalSeparatorOptions(),
-            imageContentMode: imageContentMode,
-            labelTextAlignment: .center,
-            segmentStates: segmentioStates()
-        )
+        let segmentioOptions: SegmentioOptions = SegmentioOptions(backgroundColor: ColorPalette.white, maxVisibleItems: 3, scrollEnabled: true, indicatorOptions: segmentioIndicatorOptions(), horizontalSeparatorOptions: segmentioHorizontalSeparatorOptions(), verticalSeparatorOptions: segmentioVerticalSeparatorOptions(), imageContentMode: imageContentMode, labelTextAlignment: .center, labelTextNumberOfLines: 2, segmentStates: segmentioStates(), animationDuration: 0.2)
+        
+        return segmentioOptions
     }
     
     fileprivate func segmentioStates() -> SegmentioStates {
